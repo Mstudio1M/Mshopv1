@@ -81,6 +81,42 @@
         }
     </style>
 </head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <style>
+        /* Тут твої стилі */
+    </style>
+</head>
+<body>
+    <!-- Тут твій HTML код для категорій і товарів -->
+
+    <!-- JavaScript для перемикання категорій -->
+    <script>
+        function showCategory(categoryId) {
+            // Знайти всі категорії
+            let categories = document.querySelectorAll('.category');
+
+            // Перебрати всі категорії та приховати їх
+            categories.forEach(category => {
+                category.classList.remove('active');
+            });
+
+            // Відобразити лише вибрану категорію
+            document.getElementById(categoryId).classList.add('active');
+        }
+
+        // Перевірка, чи є категорія "Новинки" активною при завантаженні сторінки
+        document.addEventListener("DOMContentLoaded", function () {
+            showCategory('new');
+        });
+    </script>
+</body>
+</html>
+
 <body>
 
 <header>Магазин сувенірів</header>
